@@ -128,7 +128,7 @@ function App() {
 
           {/* down section */}
           <div className="flex flex-col items-center">
-            <div className="mt-[10px] absolute bottom-[75px] md:bottom-[30px]">
+            <div className="mt-[10px] bottom-[75px] absolute max-h-820:bottom-[45px] max-h-790:bottom-[20px] md:bottom-[30px]">
               <div className="flex items-center justify-between text-white">
                 <article className="flex items-center gap-[5px]">
                   <img src={stormIcon} alt="stormIcon" />

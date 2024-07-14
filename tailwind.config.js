@@ -8,6 +8,8 @@ module.exports = {
       },
       screens: {
         lt: '425px',
+        'max-h-820': { raw: '(max-height: 820px)' },
+        'max-h-790': { raw: '(max-height: 790px)' },
       },
     },
   },
