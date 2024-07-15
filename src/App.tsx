@@ -101,7 +101,11 @@ function App() {
   ];
 
   const [levelIndex, setLevelIndex] = useState(6);
-  const [points, setPoints] = useState(732749365);
+  const [points, setPoints] = useState(() => {
+    const savedPoints = localStorage.getItem('points');
+    return savedPoints ? parseInt(savedPoints) : 732749365;
+  });
+
   const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>([]);
   const pointsToAdd = 300;
   const profitPerHour = 15126420;
@@ -128,6 +132,10 @@ function App() {
 
     return `${paddedHours}:${paddedMinutes}`;
   };
+
+  useEffect(() => {
+    localStorage.setItem('points', points.toString());
+  }, [points]);
 
   useEffect(() => {
     const updateCountdowns = () => {
@@ -208,7 +216,7 @@ function App() {
               <p className="text-sm">Gevork Sarkisyan</p>
             </div>
           </div>
-          <div className="flex items-center justify-between space-x-4 mt-1">
+          <div onClick={handleWarning} className="flex items-center justify-between space-x-4 mt-1">
             <div className="flex items-center w-1/3">
               <div className="w-full">
                 <div className="flex justify-between">
@@ -226,7 +234,9 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center w-2/3 border-2 border-[#43433b] rounded-full px-4 py-[2px] bg-[#43433b]/[0.6] max-w-64">
+            <div
+              onClick={handleWarning}
+              className="flex items-center w-2/3 border-2 border-[#43433b] rounded-full px-4 py-[2px] bg-[#43433b]/[0.6] max-w-64">
               <img src={binanceLogo} alt="Exchange" className="w-8 h-8" />
               <div className="h-[32px] w-[2px] bg-[#43433b] mx-2"></div>
               <div className="flex-1 text-center">
