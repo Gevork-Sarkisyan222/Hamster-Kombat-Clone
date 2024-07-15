@@ -212,7 +212,7 @@ function App() {
             <div className="flex items-center w-1/3">
               <div className="w-full">
                 <div className="flex justify-between">
-                  <p className="text-[10px]">{levelNames[levelIndex]}</p>
+                  <p className="text-[12px]">{levelNames[levelIndex]}</p>
                   <p className="text-sm">
                     {levelIndex + 1} <span className="text-[#95908a]">/ {levelNames.length}</span>
                   </p>
