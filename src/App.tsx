@@ -342,7 +342,7 @@ function App() {
             animation: `float 1s ease-out`,
           }}
           onAnimationEnd={() => handleAnimationEnd(click.id)}>
-          {pointsToAdd}
+          +{pointsToAdd}
         </div>
       ))}
     </div>
