@@ -284,8 +284,8 @@ function App() {
 
             <div className="px-4 mt-4 flex justify-center">
               <div className="px-4 py-2 flex items-center space-x-2">
-                <img src={dollarCoin} alt="Dollar Coin" className="w-10 h-10" />
-                <p className="text-4xl text-white">{points.toLocaleString()}</p>
+                <img src={dollarCoin} alt="Dollar Coin" className="w-[37px] h-[37px]" />
+                <p className="leading-[2.5rem] text-[34px] text-white">{points.toLocaleString()}</p>
               </div>
             </div>
 
